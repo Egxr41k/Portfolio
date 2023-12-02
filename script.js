@@ -4,7 +4,7 @@ const render = async () => {
     const repos = await fetchRepos();
     const repoNames = repos.map(element => element.name);
     //repoNames.forEach(async (name) => {
-    let name = repoNames[0]
+    let name = repoNames[2]
     const readmeUrl = await getREADMEUrlByRepoName(name);
     console.log(readmeUrl);
     const readme = await getAndDecodeREADME(readmeUrl);
@@ -13,10 +13,10 @@ const render = async () => {
     console.log(html);
     const project = formatHTML(html)
 
-    const link = generateLink(name)
-    link.classList.add("projectLink")
+    const githubLink = generateGHLink(name)
+    githubLink.classList.add("projectLink")
 
-    renderProject({ ...project, link: link });
+    renderProject({ ...project, link: githubLink });
 
     //});
 };
@@ -66,17 +66,6 @@ const formatHTML = (htmlContent) => {
     }
 };
 
-const renderProject = ({ image, title, description, link }) => {
-    const project = document.createElement('div');
-    project.classList.add('project');
-
-    project.append(image, title, description, link);
-    //console.log(image, title, description, link);
-
-    const container = document.querySelector('#projects .container');
-    container.appendChild(project);
-}
-
 const getImage = (htmlContent) => {
     const imgRegExp = /<img src="(.*?)" alt="(.*?)"/;
     const match = htmlContent.match(imgRegExp);
@@ -110,11 +99,22 @@ const getDescription = (htmlContent) => {
     return descriptionElement;
 };
 
-const generateLink = (repoName) => {
+const generateGHLink = (repoName) => {
     const linkElement = document.createElement('a');
     linkElement.href = `https://github.com/${user}/${repoName}`;
     linkElement.innerHTML = "view on GitHub";
     return linkElement
 };
+
+const renderProject = ({ image, title, description, link }) => {
+    const project = document.createElement('div');
+    project.classList.add('project');
+
+    project.append(image, title, description, link);
+    //console.log(image, title, description, link);
+
+    const container = document.querySelector('.project-list');
+    container.appendChild(project);
+}
 
 render();

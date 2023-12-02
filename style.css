@@ -12,6 +12,11 @@ p {
     padding: auto;
 }
 
+a {
+    text-decoration: none;
+    color: blue;
+}
+
 header {
     background-color: #800080;
     padding: 20px;
@@ -22,6 +27,7 @@ header {
     width: 1000px;
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
 }
 
 header .container {
@@ -128,6 +134,37 @@ button:focus {
 #projects {
     height: 90vh;
 }
+
+.section-title{
+    width: 100%;
+
+}
+
+.project {
+    border: #fff solid 2px;
+    padding: 10px;
+}
+
+.projectImg {
+    height: 50%;
+    width: 50%;
+}
+
+.projectTitle {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    color: white;
+    font-size: 2em;
+}
+
+.projectDescription {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    color: white;
+    font-size: 1em;
+}
+
+
 
 footer {
     height: 10vh;
