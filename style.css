@@ -7,6 +7,7 @@ body {
     background-color: #000;
 }
 
+ul,
 p,
 h1,
 h2,
@@ -59,10 +60,6 @@ nav a {
     animation: fadeIn 1 1s ease-out;
 }
 
-section {
-    min-height: 100vh;
-}
-
 .header {
     position: absolute;
     top: 40%;
@@ -105,10 +102,10 @@ section {
 }
 
 .button:hover {
-    border: 2px solid #104F55;
+    border: 2px solid #ffffff;
     background-color: rgba(365, 365, 365, 0.5);
     cursor: pointer;
-    color: #104F55;
+    color: #ffffff;
     opacity: .8;
     transition: .3s;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -132,56 +129,48 @@ button:focus {
     background-size: cover;
 }
 
+section .container {
+    flex-direction: column;
+}
+
 .section-title {
     width: 100%;
 }
 
-.project-list {
+.card-list {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
-.project {
+.card {
     background: rgba(40, 40, 40, 0.5);
     opacity: 0.9;
     margin: 10px;
     width: 300px;
 }
 
-.projectImg {
-    height: 300px;
-    width: 100%;
-    object-fit: cover;
-}
-
-.project-text {
+.card-content {
+    font-family: 'Roboto', sans-serif;
+    color: white;
     padding: 20px;
 }
 
-.project-text p a {
+.card-content p a {
     text-decoration: none;
     color: #7d00b8;
     font-weight: 500;
 }
 
-.project-image {
+.card-image {
     height: 300px;
     width: 100%;
     object-fit: cover;
 }
 
-.project-title {
-    font-family: 'Roboto', sans-serif;
-    color: white;
+#see-more:hover {
+    background-color: rgba(125, 0, 184, 0.5);
 }
-
-.project-description {
-    font-family: 'Roboto', sans-serif;
-    color: white;
-}
-
-
 
 footer .container {
     justify-content: center;

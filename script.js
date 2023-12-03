@@ -75,13 +75,13 @@ const markdownToHTML = (markdownContent) =>
 
 const formatHTML = (htmlContent) => {
     const imageElement = getImage(htmlContent);
-    imageElement.classList.add("project-image");
+    imageElement.classList.add("card-image");
 
     const titleElement = getTitle(htmlContent);
-    titleElement.classList.add("project-title");
+    titleElement.classList.add("card-title");
 
     const descriptionElement = getDescription(htmlContent);
-    descriptionElement.classList.add("project-description");
+    descriptionElement.classList.add("card-description");
 
     return {
         image: imageElement,
@@ -132,10 +132,11 @@ const generateGHLink = (repoName) => {
 
 const renderProject = ({ image, title, description, link, homepage }) => {
     const project = document.createElement('div');
-    project.classList.add('project');
+    //project.classList.add('project');
+    project.classList.add('card');
 
     const projectText = document.createElement('div');
-    projectText.classList.add('project-text');
+    projectText.classList.add('card-content');
 
     projectText.append(title, description);
 
