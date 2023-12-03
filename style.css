@@ -7,15 +7,17 @@ body {
     background-color: #000;
 }
 
-p, h1, h2, h3, h4, h5, h6{
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
-    padding: auto;
+    font-weight: 200;
 }
 
-a {
-    text-decoration: none;
-    color: blue;
-}
 
 header {
     background-color: #7000a4;
@@ -23,12 +25,11 @@ header {
     height: 10vh;
 }
 
-/* .container {
+.container {
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
-} */
+}
 
 header .container {
     justify-content: space-between;
@@ -58,19 +59,8 @@ nav a {
     animation: fadeIn 1 1s ease-out;
 }
 
-/* section {
+section {
     min-height: 100vh;
-    border-bottom: 2px solid white;
-} */
-
-h2 {
-    margin-top: 0;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
 }
 
 .header {
@@ -84,7 +74,7 @@ ul {
     font-size: 2em;
 }
 
-#about .container .content{
+#about .container .content {
     width: 100%;
 }
 
@@ -128,27 +118,36 @@ button:focus {
     outline: none;
 }
 
-.section-title{
+#skills .container {
+    height: 90vh;
+}
+
+.separator {
+    height: 100px;
     width: 100%;
 }
 
-.project-list{
+#projects {
+    background-image: url("./imgs/background.jpg");
+    background-size: cover;
+}
+
+.section-title {
+    width: 100%;
+}
+
+.project-list {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
 .project {
-    /* border: #fff solid 2px;
-    padding: 10px; */
-    background: #292929;
+    background: rgba(40, 40, 40, 0.5);
+    opacity: 0.9;
     margin: 10px;
     width: 300px;
 }
-
-/* .project:hover {
-    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
-} */
 
 .projectImg {
     height: 300px;
@@ -156,8 +155,14 @@ button:focus {
     object-fit: cover;
 }
 
-.project-text{
+.project-text {
     padding: 20px;
+}
+
+.project-text p a {
+    text-decoration: none;
+    color: #7d00b8;
+    font-weight: 500;
 }
 
 .project-image {
@@ -168,18 +173,16 @@ button:focus {
 
 .project-title {
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
     color: white;
 }
 
 .project-description {
     font-family: 'Roboto', sans-serif;
-    font-weight: 100;
     color: white;
 }
 
 
 
-footer {
-    height: 10vh;
+footer .container {
+    justify-content: center;
 }
