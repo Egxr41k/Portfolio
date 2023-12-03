@@ -116,10 +116,6 @@ button:focus {
     outline: none;
 }
 
-#skills .container {
-    height: 90vh;
-}
-
 .separator {
     height: 100px;
     width: 100%;
@@ -127,6 +123,12 @@ button:focus {
 
 #projects {
     background-image: url("./imgs/background.jpg");
+    background-size: cover;
+}
+
+#skills {
+    padding: 0;
+    background-image: url("./imgs/skills-background.jpg");
     background-size: cover;
 }
 
@@ -169,6 +171,27 @@ section .container {
     height: 300px;
     width: 100%;
     object-fit: cover;
+}
+
+#skills .card-content{
+    display: flex;
+}
+
+#skills .card-title {
+    align-self: center;
+    margin: 0 20px;
+}
+
+.progress-bar {
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    transition: width.5s ease;
+}
+
+.progress-bar-inner {
+    height: 100%;
+    background-color: #7000a4;
 }
 
 #see-more:hover {
